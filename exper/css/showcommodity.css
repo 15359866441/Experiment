@@ -1,0 +1,74 @@
+@charset "utf-8";
+td img{
+    width: 80px;
+}
+tr{
+    text-align: center;
+}
+td .delete{
+    padding: 2px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    background-color: #FF5722;
+}
+td .update{
+    padding: 2px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 42px;
+    height: 25px;
+    background-color: #009688;
+}
+table #identifier{
+    width: 530px;
+}
+tr:hover{
+    background-color: rgb(243, 243, 243);
+}
+
+.tips p{
+    float: left;
+}
+.nav_bottom{
+    float: right;
+    position: relative;
+    /*border: 1px solid red;*/
+}
+.nav_bottom input{
+    width: 500px;
+    height: 40px;
+    margin-top: 1px;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 30px;
+    color: gray;
+    font-size: 18px;
+    caret-color: blue;
+    /* 取消原来输入框的边框，原变边框不便操作 */
+    border: none;
+    border: 2px solid red;
+}
+.nav_bottom button{
+    position: absolute;
+    right: 0;
+    height: 42px;
+    width: 80px;
+    /*top: calc(50% - 21px);*/
+    /* 左上、右上、右下、左下 */
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    border: none;
+    background-color: #FF4400;
+    color: cornsilk;
+    font-size: 18px;
+}
+.nav_bottom button:hover{
+    background-color: #e7541e;
+}
+.nav_bottom button:active{
+    color: #ecbdac;
+}

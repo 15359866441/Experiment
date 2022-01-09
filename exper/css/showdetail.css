@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 导航栏部分 */
+
+nav{
+    width: 100%;
+    height: 103px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+}
+nav .nav_top{
+    height: 40px;
+    box-sizing: border-box;
+    background-color: rgb(223, 219, 219);
+    position: relative;
+    margin-bottom: 3px;
+}
+
+/* 昵称选项区域 */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.profile {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 930px;
+    /*border: 1px solid red;*/
+    margin: 0 0;
+}
+
+.profile > li {
+    float: left;
+    color: #212121;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.profile > li span{
+    line-height: 40px;
+    color: gray;
+}
+
+.profile-select {
+    position: relative;
+}
+
+
+.triangle {
+    width: 40px;
+    height: 30px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    z-index: 99;
+}
+
+.triangle::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    transform: rotate(45deg);
+    transition: all .2s;
+}
+
+/* 鼠标经过div 里面的三角旋转 ：原来是45，现在要旋转180，所以总的度数是两者之和” */
+.triangle:hover::after {
+    transform: rotate(225deg);
+}
+
+.profile-sub-list {
+    display: none;
+    width: 100px;
+    height: 90px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    top: 28px;
+    left: -42px;
+    z-index: 99;
+}
+
+.triangle:hover .profile-sub-list {
+    display: block;
+}
+
+.profile-sub-list ul {
+    padding: 5px 0;
+}
+
+.profile-sub-list li {
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.profile-sub-list li:hover {
+    background: #ddd;
+}
+
+.profile-sub-list li:hover a {
+    color: #e94400;
+}
+
+
+.nav_top .nav_box{
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    right: 180px;
+    /* border: 1px solid red; */
+}
+.nav_box a{
+    left: 50px;
+    text-decoration: none;
+    color: gray;
+    line-height: 40px;
+    margin-left: 45px;
+}
+.nav_box a:hover{
+    color: red;
+}
+nav .nav_bottom{
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    /* 为搜索框开启相对定位并设置参照物 */
+    position: relative;
+}
+.nav_bottom img{
+    height: 60px;
+}
+.nav_bottom img:nth-child(2){
+    box-sizing: border-box;
+    margin-left: 60px;
+}
+.nav_bottom .sear_input{
+    position: absolute;
+    right: 0;
+    width: 500px;
+    height: 40px;
+    /* 运算符号之间要用符号隔开 */
+    top: calc(50% - 22px);
+    border-radius: 20px;
+    outline: none;
+    padding-left: 30px;
+    color: gray;
+    font-size: 18px;
+    caret-color: blue;
+    /* 取消原来输入框的边框，原变边框不便操作 */
+    border: none;
+    border: 2px solid red;
+}
+.nav_bottom button{
+    position: absolute;
+    right: 0;
+    height: 42px;
+    width: 80px;
+    top: calc(50% - 21px);
+    /* 左上、右上、右下、左下 */
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    border: none;
+    background-color: #FF4400;
+    color: cornsilk;
+    font-size: 18px;
+}
+.nav_bottom button:hover{
+    background-color: #e7541e;
+}
+.nav_bottom button:active{
+    color: #ecbdac;
+}
+
+
+/* 主体部分 */
+.center_con{
+    width: 960px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 140px;
+    border: 2px solid #dadada;
+}
+.center_con .main_menu{
+    width:490px;
+    height:550px;
+    overflow:hidden;
+}
+.goods_detail_list{
+    width:420px;
+    height:350px;
+}
+.goods_detail_list h3{
+    margin-top: 70px;
+    font-size:24px;
+    font-weight:normal;
+}
+.goods_detail_list p{
+    color:#666;
+    line-height:40px;
+}
+.main_menu img{
+    width: 490px;
+    height: 550px;
+}
+
+.prize_bar{
+    width: 300px;
+    height:72px;
+    background-color:#fff5f5;
+    line-height:72px;
+}
+.prize_bar .show_prize{
+    font-size:20px;
+    color:#ff3e3e;
+    padding-left:20px
+}
+.prize_bar .show_pirze em{
+    font-style:normal;
+    font-size:36px;
+    padding-left:10px
+}
+em{
+    font-style:normal;
+}
+.prize_bar .show_unit{
+    padding-left: 150px;
+}
+.goods_num{
+    height: 52px;
+    margin-top: 19px;
+}
+.goods_num .num_name{
+    width:50px;
+    height:52px;
+    line-height:52px;
+}
+.num_change{position: relative;top: 7px;left: -7px;}
+input[type="button"]{
+    width: 30px;
+    height: 30px;
+}
+input[type="text"]{
+    width: 30px;
+    height: 25px;
+}
+.total{
+    height: 35px;
+    line-height: 35px;
+    margin-top: 25px;
+}
+.total em{
+    font-style:normal;
+    color:#ff3e3e;
+    font-size:18px
+}
+.operate_btn{
+    height:40px;
+    margin-top:35px;
+    font-size:0;
+    position:relative;
+}
+.operate_btn .add_car,.operate_btn .tobuy{
+    display:inline-block;
+    width:178px;
+    height:38px;
+    border:1px solid #c40000;
+    font-size:19px;
+    color:#c40000;
+    line-height:38px;
+    text-align:center;
+    background-color:#ffeded;
+}
+.operate_btn .tobuy{
+    background-color:#c40000;
+    font-size: 19px;
+    color:#fff;
+    margin-left:10px;
+    position:relative;
+    /*z-index:10;*/
+}
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}

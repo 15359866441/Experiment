@@ -1,0 +1,57 @@
+/* logo、当前时间部分 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    width: 96%;
+    height: 60px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    position: relative;
+    /* background-color: seagreen; */
+}
+
+nav img {
+    /* 此处需设置浮动，否则下面的时间内容不会浮动到nav中，而是在nav下方进行浮动 */
+    float: left;
+    height: 60px;
+}
+
+nav .time {
+    float: left;
+    margin-left: 440px;
+    margin-top: 5px;
+}
+
+
+/* 个人信息部分 */
+.profile{
+    float: right;
+    margin-left: 100px;
+    margin-top: 5px;
+    width: 150px;
+    height: 60px;
+    /*border: 1px solid red;*/
+}
+.profile .pro_pic{
+    height: 30px;
+    /* border: 1px solid blue; */
+}
+.pro_pic img{
+    height: 30px;
+    margin-left: 10px;
+}
+.pro_pic #username{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.pro_set a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.pro_set a:last-child{
+    margin-left: 15px;
+}

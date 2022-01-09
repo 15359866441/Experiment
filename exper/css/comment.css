@@ -1,0 +1,335 @@
+@charset "utf-8";
+*{
+    /*background-color: #f9f9f9;*/
+    background-color: #F2F3F5;
+}
+/* 顶部区 */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:  #f9f9f9;
+    z-index: 999;
+}
+
+.nav {
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    position: relative;
+    /*background-color:  #e3f9fd;*/
+    /*border: 2px black solid;*/
+}
+
+.nav img {
+    height: 60px;
+    /*background-color:  #e3f9fd;*/
+}
+
+.nav>div {
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 130px;
+    /*background-color:  #e3f9fd;*/
+    /*border: 2px red solid;*/
+}
+
+.nav>div a {
+    font-size: 18px;
+    margin-left: 95px;
+}
+
+/*商品搜索框*/
+.search_dynamic{
+    position: absolute;
+    top: 80px;
+    right: 150px;
+    width: 200px;
+    height: 40px;
+    margin-left: 700px;
+}
+
+.search_dynamic input{
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    height: 40px;
+    width: 250px;
+    background-color: #f5f6f7;
+    border: 2px red solid;
+
+}
+
+.search_dynamic button{
+    position: absolute;
+    top: -1px;
+    right: -85px;
+    height: 40px;
+    width: 40px;
+    border: 0 white solid;
+    background-color:red;
+    /*z-index: 1000;*/
+}
+
+.search_dynamic button:hover{
+    cursor: pointer;
+    background: orangered;
+}
+
+/* 头像昵称区域 */
+li {
+    list-style: none;
+    /*background-color:  #e3f9fd;*/
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+a:hover{
+    color: red;
+}
+
+.profile {
+    position: absolute;
+    font-size: 16px;
+    margin-right: 20px;
+    right: 0;
+    top: 0;
+    height: 60px;
+    width: 200px;
+    /*background-color:  #e3f9fd;*/
+    /* border: 1px solid red; */
+    margin: 0 0;
+}
+
+/* 一级菜单 */
+.profile > li {
+    float: left;
+    color: #212121;
+    font-size: 18px;
+    /* margin-left: 15px; */
+}
+
+.profile > li p{
+    font-size: 18px;
+    margin-top: 16px;
+    margin-left: 30px;
+}
+
+.profile-select {
+    position: relative;
+}
+
+.profile-list {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-top: 4px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.profile-list img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.triangle {
+    width: 21px;
+    height: 40px;
+    position: absolute;
+    right: -21px;
+    top: 18px;
+}
+
+.triangle::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    transform: rotate(45deg);
+    transition: all .2s;
+}
+
+/* 鼠标经过div 里面的三角旋转 ：原来是45，现在要旋转180，所以总的度数是两者之和” */
+.triangle:hover::after {
+    transform: rotate(225deg);
+}
+
+.profile-sub-list {
+    display: none;
+    width: 100px;
+    height: 90px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    left: -64px;
+}
+
+.triangle:hover .profile-sub-list {
+    display: block;
+}
+
+.profile-sub-list ul {
+    padding: 5px 0;
+}
+
+.profile-sub-list li {
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.profile-sub-list li:hover {
+    background: rgb(243, 243, 243);
+}
+
+.profile-sub-list li:hover a {
+    color: #e94400;
+}
+
+.send_message{
+    margin-top: 10px;
+    margin-left: 380px;
+    height: 150px;
+    width: 760px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.inside{
+    background-color: white;
+    margin: 80px auto;
+    height: 150px;
+    border: 2px white solid;
+}
+
+
+.textarea1 {
+    display: block;
+    margin:auto;
+    /*overflow: hidden;*/
+    width: 600px;
+    font-size: 16px;
+    height: 60px;
+    line-height: 24px;
+    padding:10px;
+    margin:300px auto 0;
+    outline: 0 none;
+    background-color: #f5f5f5;
+    border-radius: 10px / 10px;
+}
+
+.textarea1:hover{
+    background-color: white;
+    border-color:rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+button{
+    margin-left: 600px;
+    margin-top: 10px;
+    border-radius: 20px / 20px;
+    height: 40px;
+    width: 80px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border: 0;
+    background-color: #e7541e;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #FF4400;
+}
+
+#container{
+    margin-top: 0;
+    margin-left:380px;
+    position:relative;
+    width: 760px;
+    min-height: 1000px;
+
+
+    /*border: 2px black solid;*/
+}
+
+#content1{
+    margin: 40px auto;
+    border: 0;
+    width: 760px;
+    height: 200px;
+    background-color: white;
+
+}
+
+.list{
+    width: 760px;
+    height: 100px;
+    margin-left: 0;
+    margin-top: 20px;
+    background-color: white;
+
+    /*border: 2px blue solid;*/
+}
+
+.other-user{
+    width: 760px;
+    height: 70px;
+    background-color: white;
+    margin-left: -40px;
+
+    /*border: 2px yellow solid;*/
+}
+
+.other-head{
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 70px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
+.other-name{
+    text-align: left;
+    line-height: 20px;
+    width: 500px;
+    margin-left: 80px;
+    margin-top: -50px;
+    font-size: 15px;
+    background-color: white;
+}
+
+#textarea2 {
+    display: block;
+    margin:10px auto;
+    overflow: hidden;
+    width: 760px;
+    font-size: 18px;
+    height: 100px;
+    line-height: 24px;
+    padding:0px 80px;
+    border: 0;
+    /*background-color: #f5f5f5;*/
+}
+.textarea2 {
+    outline: 0 none;
+    background-color: white;
+    border: 0px white solid;
+    /*box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);*/
+}

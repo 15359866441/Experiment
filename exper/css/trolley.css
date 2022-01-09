@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+.trolley {
+    width:1300px;
+    height:100%;
+    border:2px solid #30e5df;
+    position:relative;
+    top:auto;
+    left:150px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: auto;
+}
+
+.trolley .trolleyHead{
+    width:1300px;
+    height:100px;
+    position: relative;
+    display:flex;
+    background: #a9faf1;
+    line-height: 100px;
+
+}
+
+
+.trolleyHead .bookInfo{
+    width:400px;
+    height:90px;
+    position:relative;
+    text-align: center;
+
+}
+
+.trolleyHead .bookPrice{
+    width:200px;
+    height:90px;
+    position:relative;
+}
+
+.trolleyHead .bookNum{
+    width:200px;
+    height:90px;
+    position:relative;
+}
+
+.trolleyHead .bookOperation{
+    width:200px;
+    height:90px;
+    display: inline-flex;
+    position:relative;
+    left: 11%;
+
+}
+
+.supplier{
+    margin-top: 25px;
+    /*border: 1px solid red;*/
+    width:1300px;
+    height: fit-content;
+    position:relative;
+    top:20px;
+    background-color: #d4fcfb;
+}
+
+.supplier .supplierBooks{
+
+    width:1250px;
+    display:flex;
+    position:relative;
+}
+
+.supplier .supplierBookImage {
+    width: 200px;
+    height: 166px;
+
+}
+
+.supplier .supplierBookImage img{
+    margin-top: 8px;
+    width:120px;
+    height:150px;
+}
+
+.supplier .supplierBookDescription{
+    width:200px;
+    height:150px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.supplier .supplierBookPrice{
+    width:200px;
+    height:150px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.supplier .supplierBookNum{
+    width:200px;
+    height:150px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.supplier .bookDelete{
+    width:200px;
+    height:150px;
+    /*margin-left: 2px;*/
+    display: inline-flex;
+    align-items: center;
+    /*border: 1px solid red;*/
+}
+
+.supplier .bookDelete .del {
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    padding: 3px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: red;
+}
+
+.supplier .bookDelete .tobuy {
+    display: inline-block;
+    margin-left: 30px;
+    width: 50px;
+    height: 26px;
+    padding: 3px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+}

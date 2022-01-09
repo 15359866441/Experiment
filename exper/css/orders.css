@@ -1,0 +1,375 @@
+@charset "utf-8";
+/*顶部区*/
+
+/* 顶部区 */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+.nav {
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    position: relative;
+
+    /*border: 2px black solid;*/
+}
+
+.nav img {
+    height: 60px;
+}
+
+.nav>div {
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 230px;
+
+    /*border: 2px red solid;*/
+}
+
+.nav>div a {
+    font-size: 18px;
+    margin-left: 95px;
+}
+
+/*商品搜索框*/
+.search_goods{
+    position: absolute;
+    right: 110px;
+    top: 80px;
+    width: 200px;
+    height: 40px;
+    margin-left: 700px;
+
+    /*border: 2px black solid;*/
+}
+
+.search_goods input{
+    position: absolute;
+    top: 10px;
+    right: 98px;
+    height: 30px;
+    width: 200px;
+    background-color: #f5f6f7;
+    border: 1px red solid;
+
+    /*border: 2px black solid;*/
+}
+
+.search_goods button{
+    position: absolute;
+    top: 10px;
+    right: 70px;
+    height: 30px;
+    width: 30px;
+    border: red;
+    background-color:red;
+
+    /*border: 2px black solid;*/
+}
+
+.search_goods button:hover{
+    cursor: pointer;
+    background-color: orangered;
+}
+
+/* 头像昵称区域 */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.profile {
+    position: absolute;
+    font-size: 16px;
+    margin-right: 20px;
+    right: 0;
+    top: 0;
+    height: 60px;
+    width: 200px;
+    /* border: 1px solid red; */
+    margin: 0 0;
+}
+
+/* 一级菜单 */
+.profile > li {
+    float: left;
+    color: #212121;
+    font-size: 18px;
+    /* margin-left: 15px; */
+}
+
+.profile > li p{
+    font-size: 18px;
+    margin-top: 16px;
+    margin-left: 30px;
+}
+
+.profile-select {
+    position: relative;
+}
+
+.profile-list {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-top: 4px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.profile-list img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.triangle {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -25px;
+    top: 18px;
+}
+
+.triangle::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    transform: rotate(45deg);
+    transition: all .2s;
+}
+
+/* 鼠标经过div 里面的三角旋转 ：原来是45，现在要旋转180，所以总的度数是两者之和” */
+.triangle:hover::after {
+    transform: rotate(225deg);
+}
+
+.profile-sub-list {
+    display: none;
+    width: 100px;
+    height: 90px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    left: -48px;
+}
+
+/*.profile-list:hover {*/
+/*    color: #e94400;*/
+/*}*/
+
+.triangle:hover .profile-sub-list {
+    display: block;
+}
+
+.profile-sub-list ul {
+    padding: 5px 0;
+}
+
+.profile-sub-list li {
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.profile-sub-list li:hover {
+    background: rgb(243, 243, 243);
+}
+
+.profile-sub-list li:hover a {
+    color: #e94400;
+}
+
+/*订单搜索框*/
+nav .nav_bottom{
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    /* 为搜索框开启相对定位并设置参照物 */
+    position: relative;
+}
+
+.nav_bottom input{
+    position: absolute;
+    left: 25%;
+    width: 500px;
+    height: 40px;
+    /* 运算符号之间要用符号隔开 */
+    top: calc(50% - 22px);
+    border-radius: 20px;
+    outline: none;
+    padding-left: 30px;
+    color: gray;
+    font-size: 18px;
+    caret-color: blue;
+    /* 取消原来输入框的边框，原变边框不便操作 */
+    border: none;
+    border: 2px solid red;
+}
+.nav_bottom button{
+    position: absolute;
+    left: 65%;
+    height: 42px;
+    width: 100px;
+    top: calc(50% - 23px);
+    /* 左上、右上、右下、左下 */
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    border: none;
+    background-color: #FF4400;
+    color: cornsilk;
+    font-size: 18px;
+}
+.nav_bottom button:hover{
+    background-color: #e7541e;
+}
+.nav_bottom button:active{
+    color: #ecbdac;
+}
+
+/*订单区域*/
+main{
+    width: 1200px;
+    height: 100%;
+    margin: 150px auto;
+}
+
+main .left_nav{
+    margin-top: -20px;
+    width: 200px;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+main .order{
+    margin-left: 200px;
+    width: 1000px;
+    height: 100%;
+}
+
+.order>.top{
+    margin-bottom: 50px;
+    width: 1000px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background-color: #eeeeee;
+    font-size: 15px;
+}
+
+.top img{
+    width: 10px;
+    height: 10px;
+    display: inline;
+    float: right;
+}
+
+.top>div{
+    float: left;
+}
+
+main .card{
+    margin-top: 20px;
+    width: 1000px;
+    height: 225px;
+    border: 2px #eeeeee solid;
+}
+
+.card>.top{
+    width: 1001px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #eeeeee;
+}
+
+.card img{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 150px;
+    width: 130px;
+    float: left;
+}
+
+.card .depiction{
+    margin-left: 170px;
+    margin-top: 20px;
+    width: 300px;
+    height: 120px;
+    /*border: 2px black solid;*/
+
+}
+
+.depiction>p{
+    margin-top: 60px;
+    height: 60px;
+    /*border: 2px red solid;*/
+}
+
+.card .price{
+    margin-top: -150px;
+    margin-left: 480px;
+    width: 170px;
+    height: 120px;
+    text-align: center;
+    /*border: 2px red solid;*/
+    /*float: left;*/
+}
+
+.price>p{
+    margin-top: 40px;
+    height: 60px;
+    /*border: 2px red solid;*/
+}
+
+.card .quantity{
+    margin-top: -150px;
+    margin-left:650px;
+    width: 170px;
+    height: 120px;
+    text-align: center;
+    /*border: 2px red solid;*/
+}
+
+.quantity>p{
+    margin-top: 30px;
+    height: 60px;
+    /*border: 2px red solid;*/
+}
+
+.card .order_price{
+    margin-top: -190px;
+    margin-left:820px;
+    width: 170px;
+    height: 176px;
+    text-align: center;
+    border: 2px white solid;
+    border-left: 2px #eeeeee solid;
+}
+
+.order_price>p{
+    margin-top: 70px;
+    height: 60px;
+    /*border: 2px red solid;*/
+}
